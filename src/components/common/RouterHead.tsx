@@ -7,10 +7,11 @@ import { useDocumentHead, useLocation } from "@builder.io/qwik-city";
 export const RouterHead = component$(() => {
   const head = useDocumentHead();
   const loc = useLocation();
-
+  console.log("HEADDDDD",head)
   return (
     <>
-      <title>{"DesiLifter.pro"}</title>
+      <title>{head.title + " | DesiLifter.pro"}</title>
+      {/* <description>{head.descriptio}</description> */}
 
       <link rel="canonical" href={String(loc.url)} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
